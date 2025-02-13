@@ -9,7 +9,7 @@ module my_chip (
     // TODO: remove the counter design and use this module to insert your own design
     // DO NOT change the I/O header of this design
 
-    RangeFinder iRange #(parameter WIDTH=10) (
+    RangeFinder #(10) iRange (
         .data_in(io_in[9:0]),
         .clock(clock), .reset(reset),
         .go(io_in[10]), .finish(io_in[11]),
