@@ -1,11 +1,13 @@
-module RangeFinder #(parameter WIDTH=16) (
-	input logic [WIDTH-1:0] data_in,
+module RangeFinder (
+	input logic [9:0] data_in,
 	input logic clock, reset,
 	input logic go, finish,
-	output logic [WIDTH-1:0] range,
+	output logic [9:0] range,
 	output logic debug_error
 	
 	);
+
+	localparam WIDTH = 10;
 	
 	// flop the current seen highest and lowest values.
 	logic [WIDTH-1:0] low_val, high_val;
